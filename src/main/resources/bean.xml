@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+>
+<!-- 
+    <bean class="com.baeldung.springbootxml.Pojo">
+        <property name="field" value="sample-value"></property>
+    </bean>
+ -->
+ 	
+ 	<bean id="jeringa" class="ioc.Jeringa" />
+ 	<bean id="bisturi" class="ioc.Bisturi" />
+ 	
+ 	<bean id="operarConJeringa" class="ioc.Medico" >
+ 		<property name="util" ref="jeringa" />
+ 	</bean>
+ 	
+ 	<bean id="operarConBisturi" class="ioc.Medico" >
+ 		<property name="util" ref="bisturi" />
+ 	</bean>
+ 	
+</beans>
